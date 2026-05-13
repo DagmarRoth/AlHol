@@ -219,6 +219,9 @@ h1.ttl em { font-style:italic; color:var(--amber2); }
   background:rgba(255,255,255,.06); padding:.1em .35em; border-radius:3px;
   color:var(--mid);
 }
+.mrepo { margin-top:1.5rem!important; }
+.mrepo a { color:var(--amber); text-decoration:none; border-bottom:1px solid rgba(245,158,11,.3); transition:border-color .2s; }
+.mrepo a:hover { border-color:var(--amber); }
 
 </style>
 </head>
@@ -473,6 +476,7 @@ h1.ttl em { font-style:italic; color:var(--amber2); }
     <h3 class="mhead">Methodology</h3>
     <p>Displacement and return figures come from UNHCR/OCHA&rsquo;s Displacement Tracking Matrix for Syria, December 2025 — 8,325 community-level records covering all 14 governorates. IDP counts reflect populations living outside their area of origin within Syria; returnee counts track movements since December 8, 2024. Monthly return figures are drawn from the same DTM reporting series. US aid figures are from USAID and the UN Financial Tracking Service. Quotes from Abu Qaseem, Muzar Al Salloul, Sheikmous Ahmed, and Adam Coogle are drawn from the article &ldquo;Leaving Limbo&rdquo; (2026). The al-Hol population figure and foreign national estimates reflect U.S. intelligence assessments cited in contemporaneous reporting.</p>
     <p>The map is built with Leaflet 1.9.4 on a CARTO dark tile layer. Each dot represents one monitored community; size and color encode population scale using a five-tier threshold system applied separately to IDP and returnee counts. All 8,325 style values are pre-computed at load time into typed arrays and interpolated across 550 ms transitions during scroll — an approach that keeps the animation loop free of per-frame computation. Scroll choreography uses two <code>IntersectionObserver</code> instances with no scroll event listeners. The monthly return chart is rendered with D3 v7. Video footage is from Al Jazeera and WION; sections play and pause natively via a third observer as they enter and exit the viewport.</p>
+    <p class="mrepo">Code and data &rarr; <a href="https://github.com/DagmarRoth/AlHol" target="_blank" rel="noopener">github.com/DagmarRoth/AlHol</a></p>
   </div>
 </footer>
 
